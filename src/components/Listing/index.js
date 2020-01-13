@@ -29,6 +29,7 @@ export default class Listing extends Component {
                 }}
               ></div>
               <p className="listItem__name">{item.name}</p>
+              <div className="listItem__ratings">{item.stars}</div>
             </div>
           );
         })}
