@@ -1,54 +1,91 @@
-.listItem {
+.listContainer {
+  border: 1px solid #d4d4d4;
+  margin-left: 8px;
+  .listItem {
     display: flex;
-    flex-wrap: no-wrap;
-    align-items: center;
-    border: 1px solid #d4d4d4;
-    background: #f2f2f2;
+    flex-wrap: nowrap;
+    align-items: flex-start;
     border-radius: 4px;
-    padding: 8px 16px;
+    padding: 16px;
     margin-bottom: 8px;
-    width: 250px;
-    cursor: pointer;
-    transition: all 250ms ease;
-    &:hover {
-        border: 1px solid #a2a2a2;
-        background: darken(#f2f2f2, 2.5%);
+    width: auto;
+    position: relative;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      height: 1px;
+      width: calc(100% - 16px);
+      background: #d4d4d4;
     }
     .listItem__thumbnail {
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        background-size: cover;
-        background-position: center;
-        background-color: #a2a2a2;
-        flex: none;
+      width: 210px;
+      height: 210px;
+      background-size: cover;
+      background-position: center;
+      background-color: #a2a2a2;
+      flex: none;
     }
-    .listItem__name {
-        padding-right: 8px;
-        margin-left: 8px;
+    .listItem__details {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      height: 210px;
+      margin-left: 8px;
+      flex: 0 1 calc(100% - 32px);
+      .listItemDetails__name {
+        margin-bottom: 8px;
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
-    }
-    .listItem__ratings {
-        margin-left: auto;
+        text-align: left;
+        width: 100%;
         flex: none;
-        padding: 4px;
-        background: #228B22;
+        font-size: 16px;
+        text-decoration: none;
+        color: #1d5083;
+        font-weight: bold;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .listItemDetails__ratings {
+        padding: 8px;
+        background: #228b22;
         color: #fff;
         border-radius: 4px;
         display: flex;
         align-items: center;
         flex: none;
+        width: max-content       ;
+        height: 16px;
         &:before {
-            content: '';
-            display: inline-block;
-            background-image: url('/star.svg');
-            background-size: contain;
-            background-position: center;
-            width: 16px;
-            height: 16px;
-            margin-right: 4px;
+          content: "";
+          display: inline-block;
+          background-image: url("/star.svg");
+          background-size: contain;
+          background-position: center;
+          width: 16px;
+          height: 16px;
+          margin-right: 8px;
         }
+      }
+      .listItem__button {
+        padding: 0;
+        height: 40px;
+        flex: none;
+        width: 100%;
+        margin-top: auto;
+        background: #f6ab37;
+        color: #fff;
+        border-radius: 4px;
+        &:hover {
+          background: darken(#f6ab37, 5%);
+        }
+      }
     }
+  }
 }

@@ -1,0 +1,19 @@
+.appContainer {
+  display: grid;
+  grid-template-columns: 25% auto;
+  grid-template-rows: auto auto;
+  grid-row-gap: 8px;
+  grid-column-gap: 8px;
+  grid-template-areas:
+    "header header"
+    "listing details";
+}
+.listing {
+  grid-area: listing;
+}
+.details {
+  grid-area: details;
+}
+.header {
+  grid-area: header;
+}

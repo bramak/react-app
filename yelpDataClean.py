@@ -60,7 +60,7 @@ for photo in business_data['photos']:
 
 for business in business_data['business']:
     if business['business_id'] in photo_dict:
-        business['thumbnail'] = photo_dict[business['business_id']]
+        business['thumbnail'] = "https://s3-media0.fl.yelpcdn.com/bphoto/" + photo_dict[business['business_id']] + "/l.jpg"
 
 with open('db.json', 'w') as new_business_json_file:
     json.dump(business_data, new_business_json_file)

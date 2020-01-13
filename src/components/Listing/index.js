@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./styles.scss";
 import Axios from "axios";
 
-export default class Listing extends Component {
+class Listing extends Component {
   state = {
     businesses: []
   };
@@ -18,18 +18,21 @@ export default class Listing extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="listContainer">
         {this.state.businesses.map(item => {
           return (
             <div className="listItem" key={item.business_id}>
               <div
                 className="listItem__thumbnail"
                 style={{
-                  backgroundImage: `url(https://s3-media0.fl.yelpcdn.com/bphoto/${item.thumbnail}/m.jpg)`
+                  backgroundImage: `url(${item.thumbnail}`
                 }}
               ></div>
-              <p className="listItem__name">{item.name}</p>
-              <div className="listItem__ratings">{item.stars}</div>
+              <div className="listItem__details">
+                <a href="#" className="listItemDetails__name">{item.name}</a>
+                <div className="listItemDetails__ratings">{item.stars}</div>
+                <button className="listItem__button" type="button">Reserve</button>
+              </div>
             </div>
           );
         })}
@@ -37,3 +40,5 @@ export default class Listing extends Component {
     );
   }
 }
+
+export default Listing;
