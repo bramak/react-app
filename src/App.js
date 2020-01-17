@@ -1,23 +1,19 @@
 import React from "react";
 import "./App.scss";
-import Login from "./components/Login";
 import Listing from "./components/Listing";
 import Details from "./components/Details";
-import Header from "./components/Header";
+import Hero from "./components/Hero";
 
 function App() {
   return (
     <div className="appContainer">
-      <div className="header">
-        <Header />
-      </div>
-      <div className="listing">
+      <Hero />
+      {/* <section className="listing">
         <Listing />
-      </div>
-      <div className="details">
+      </section>
+      <section className="details">
         <Details />
-      </div>
-      {/* <Login /> */}
+      </section> */}
     </div>
   );
 }

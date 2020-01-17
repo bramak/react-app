@@ -1,0 +1,43 @@
+.hero {
+  width: calc(100% - 4rem);
+  height: calc(100vh - 8rem);
+  background: linear-gradient(to bottom left, rgba(#434343, 0.5), #1f1f1f),
+    url("https://images.unsplash.com/photo-1554679665-f5537f187268") center 75%;
+  background-size: cover;
+  padding: 4rem 2rem;
+  /* grid styles */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  h1 {
+    color: white;
+    align-self: start;
+    display: flex;
+    align-items: center;
+  }
+  article {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    flex-wrap: wrap;
+    font-family: "Source Sans Pro", sans-serif;
+    p {
+      color: white;
+      font-size: 2.5em;
+      font-weight: 100;
+      line-height: 1em;
+    }
+    button {
+      padding: 0.65em 1em;
+      font-size: 1.5em;
+      flex: none;
+      width: auto;
+      margin-top: 2em;
+      background: #f6ab37;
+      color: #fff;
+      border-radius: 4px;
+      &:hover {
+        background: darken(#f6ab37, 5%);
+      }
+    }
+  }
+}

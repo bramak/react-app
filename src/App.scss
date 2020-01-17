@@ -1,19 +1,13 @@
-.appContainer {
-  display: grid;
-  grid-template-columns: 25% auto;
-  grid-template-rows: auto auto;
-  grid-row-gap: 8px;
-  grid-column-gap: 8px;
-  grid-template-areas:
-    "header header"
-    "listing details";
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro:200,400');
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
 }
-.listing {
-  grid-area: listing;
+
+p, a {
+  font-family: 'Source Sans Pro', sans-serif;
 }
-.details {
-  grid-area: details;
-}
-.header {
-  grid-area: header;
+
+h1 {
+  font-size: 4rem;
 }
