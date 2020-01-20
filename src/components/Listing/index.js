@@ -18,25 +18,32 @@ class Listing extends Component {
   }
   render() {
     return (
-      <div className="listContainer">
-        {this.state.businesses.map(item => {
-          return (
-            <div className="listItem" key={item.business_id}>
-              <div
-                className="listItem__thumbnail"
-                style={{
-                  backgroundImage: `url(${item.thumbnail}`
-                }}
-              ></div>
-              <div className="listItem__details">
-                <a href="#" className="listItemDetails__name">{item.name}</a>
-                <div className="listItemDetails__ratings">{item.stars}</div>
-                <button className="listItem__button" type="button">Reserve</button>
+      <section className="listing">
+        <div className="listContainer">
+          {this.state.businesses.map(item => {
+            return (
+              <div className="listItem" key={item.business_id}>
+                <div
+                  className="listItem__top"
+                  style={{
+                    backgroundImage: `url(${item.thumbnail}`
+                  }}
+                >
+                  <div className="listItemTop__details">
+                    <div className="listItem__name">{item.name}</div>
+                    <div className="listItem__ratings">{item.stars}</div>
+                  </div>
+                </div>
+                <div className="listItem__bottom">
+                  <button className="listItem__button" type="button">
+                    View Details
+                  </button>
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
+      </section>
     );
   }
 }

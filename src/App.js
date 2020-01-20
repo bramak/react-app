@@ -7,11 +7,9 @@ import Hero from "./components/Hero";
 function App() {
   return (
     <div className="appContainer">
-      <Hero />
-      {/* <section className="listing">
-        <Listing />
-      </section>
-      <section className="details">
+      {/* <Hero /> */}
+      <Listing />
+      {/* <section className="details">
         <Details />
       </section> */}
     </div>
